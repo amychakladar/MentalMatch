@@ -3,7 +3,12 @@ import org.junit.Test;
 import java.util.*;
 
 
-/* writen with love by @amychakladar, tbd*/
+/** writen with love by @amychakladar
+ *
+ * to do:
+ * a. create the ability to import csv files and store data there because aesthetics
+ * b. add the ability to call back and see which therapists they said yes on.
+ * */
 public class TherapistMatcher {
 
     @Test
@@ -58,8 +63,11 @@ public class TherapistMatcher {
                     break;
                 }
             }
+
         }
+
     }
+
 
     public static Map<Client, List<Therapist>> match(List<Client> people, List<Therapist> therapists) {
         Map<Client, List<Therapist>> matches = new HashMap<>();
@@ -83,5 +91,22 @@ public class TherapistMatcher {
         }
         return score;
     }
+
+    private static Map<Therapist, List<Client>> getMatches(List<Client> clients, Map<Client, List<Therapist>> chosenTherapists) {
+        Map<Therapist, List<Client>> matches = new HashMap<>();
+
+        for (Client client : clients) {
+            List<Therapist> therapistList = chosenTherapists.get(client);
+            for (Therapist therapist : therapistList) {
+                if (!matches.containsKey(therapist)) {
+                    matches.put(therapist, new ArrayList<>());
+                }
+                matches.get(therapist).add(client);
+            }
+        }
+
+        return matches;
+    }
+
 
 }
