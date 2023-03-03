@@ -14,14 +14,48 @@ public class TherapistMatcher {
     @Test
     public static void main(String[] args) {
         List<Client> people = new ArrayList<>();
-        people.add(new Client("Alice", "anxiety", "female", 25));
+        people.add(new Client("Ayush", "anxiety", "male", 20));
         people.add(new Client("Bob", "depression", "male", 30));
         people.add(new Client("Charlie", "anxiety", "male", 35));
 
         List<Therapist> therapists = new ArrayList<>();
+
         therapists.add(new Therapist("Dr. Smith", "anxiety", "female", 40));
         therapists.add(new Therapist("Dr. Johnson", "depression", "male", 50));
         therapists.add(new Therapist("Dr. Lee", "anxiety", "male", 45));
+        therapists.add(new Therapist("Dr. Smith", "anxiety", "female", 40));
+        therapists.add(new Therapist("Dr. Johnson", "depression", "male", 50));
+        therapists.add(new Therapist("Dr. Lee", "anxiety", "male", 25));
+        therapists.add(new Therapist("Dr. Brown", "PTSD", "male", 35));
+        therapists.add(new Therapist("Dr. Williams", "eating disorders", "female", 28));
+        therapists.add(new Therapist("Dr. Davis", "anxiety", "male", 52));
+        therapists.add(new Therapist("Dr. Garcia", "depression", "male", 48));
+        therapists.add(new Therapist("Dr. Rodriguez", "PTSD", "female", 44));
+        therapists.add(new Therapist("Dr. Martinez", "addiction", "male", 39));
+        therapists.add(new Therapist("Dr. Hernandez", "eating disorders", "female", 33));
+        therapists.add(new Therapist("Dr. King", "depression", "male", 56));
+        therapists.add(new Therapist("Dr. Wright", "anxiety", "female", 42));
+        therapists.add(new Therapist("Dr. Lopez", "PTSD", "male", 47));
+        therapists.add(new Therapist("Dr. Scott", "addiction", "female", 31));
+        therapists.add(new Therapist("Dr. Green", "eating disorders", "male", 38));
+        therapists.add(new Therapist("Dr. Adams", "anxiety", "male", 49));
+        therapists.add(new Therapist("Dr. Baker", "depression", "female", 29));
+        therapists.add(new Therapist("Dr. Mitchell", "PTSD", "male", 41));
+        therapists.add(new Therapist("Dr. Perez", "addiction", "female", 34));
+        therapists.add(new Therapist("Dr. Cooper", "eating disorders", "male", 36));
+        therapists.add(new Therapist("Dr. Turner", "anxiety", "female", 43));
+        therapists.add(new Therapist("Dr. Parker", "depression", "male", 51));
+        therapists.add(new Therapist("Dr. Campbell", "PTSD", "male", 46));
+        therapists.add(new Therapist("Dr. Phillips", "addiction", "female", 30));
+        therapists.add(new Therapist("Dr. Ross", "eating disorders", "male", 37));
+        therapists.add(new Therapist("Dr. Edwards", "anxiety", "male", 54));
+        therapists.add(new Therapist("Dr. Collins", "depression", "female", 27));
+        therapists.add(new Therapist("Dr. Stewart", "PTSD", "male", 43));
+        therapists.add(new Therapist("Dr. Sanchez", "addiction", "female", 32));
+        therapists.add(new Therapist("Dr. Morris", "eating disorders", "male", 40));
+        therapists.add(new Therapist("Dr. Rogers", "anxiety", "female", 45));
+        therapists.add(new Therapist("Dr. Reed", "depression", "male", 53));
+        therapists.add(new Therapist("Dr. Cook", "PTSD", "male", 48));
 
         Map<Client, List<Therapist>> matches = match(people, therapists);
 
