@@ -8,15 +8,14 @@ import java.util.*;
  * to do:
  * a. create the ability to import csv files and store data there because aesthetics
  * b. add the ability to call back and see which therapists they said yes on.
+ * c. remove therapists that we have said no on
  * */
 public class TherapistMatcher {
 
     @Test
     public static void main(String[] args) {
         List<Client> people = new ArrayList<>();
-        people.add(new Client("Ayush", "anxiety", "male", 20));
-//        people.add(new Client("Bob", "depression", "male", 30));
-//        people.add(new Client("Charlie", "anxiety", "male", 35));
+        people.add(new Client("Sam", "anxiety", "male", 20));
 
         List<Therapist> therapists = new ArrayList<>();
 
@@ -33,6 +32,8 @@ public class TherapistMatcher {
             Client person = entry.getKey();
             List<Therapist> therapistList = entry.getValue();
             List<String> match = new ArrayList<>();
+            List<String> nomatch = new ArrayList<>();
+
 
             System.out.println(person.getName() + ", here are your therapist options: ");
             System.out.println("Please press 'y' to match, 'n' to move to the next therapist, and 'q' to quit.");
@@ -58,6 +59,9 @@ public class TherapistMatcher {
                     if (input.equalsIgnoreCase("y")) {
                         match.add(therapist.getName());
 //                        System.out.println("Great, you've chosen " + therapist.getName() + "!");
+                    } else if (input. equalsIgnoreCase("n")) {
+                        therapistList.remove(therapist);
+                        nomatch.add(therapist.getName());
                     } else if (input. equalsIgnoreCase("q")) {
                         break;
                     }
