@@ -58,9 +58,7 @@ public class TherapistMatcher {
                     String input = scanner.nextLine();
                     if (input.equalsIgnoreCase("y")) {
                         match.add(therapist.getName());
-//                        System.out.println("Great, you've chosen " + therapist.getName() + "!");
                     } else if (input. equalsIgnoreCase("n")) {
-                        therapistList.remove(therapist);
                         nomatch.add(therapist.getName());
                     } else if (input. equalsIgnoreCase("q")) {
                         break;

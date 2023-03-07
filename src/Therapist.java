@@ -1,5 +1,6 @@
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
+import org.junit.Test;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -17,6 +18,10 @@ public class Therapist {
     private String gender;
     private int age;
 
+    @Test
+    public static void main(String[] args) {
+        readTherapists();
+    }
     public Therapist(String name, String specialty, String gender, int age) {
         this.name = name;
         this.specialty = specialty;

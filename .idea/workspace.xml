@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c7bf9d61-62ab-4f02-a9d6-a688179103fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/library.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/therapist.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/opencsv-5.7.1.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TherapistMatcher.iml" beforeDir="false" afterPath="$PROJECT_DIR$/TherapistMatcher.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Therapist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Therapist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TherapistMatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TherapistMatcher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,9 +58,16 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TherapistMatcher">
+  <component name="RunManager" selected="Application.Therapist">
     <configuration name="CsvReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CsvReader" />
+      <module name="TherapistMatcher" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Therapist" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Therapist" />
       <module name="TherapistMatcher" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -79,6 +82,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Therapist" />
         <item itemvalue="Application.TherapistMatcher" />
         <item itemvalue="Application.CsvReader" />
       </list>
