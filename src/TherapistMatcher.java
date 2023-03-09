@@ -15,7 +15,7 @@ public class TherapistMatcher {
     @Test
     public static void main(String[] args) {
         List<Client> people = new ArrayList<>();
-        people.add(new Client("Sam", "anxiety", "male", 20));
+        people.add(new Client("Sam", "anxiety", "male", 5, 20, 1));
 
         List<Therapist> therapists = new ArrayList<>();
 
@@ -96,28 +96,12 @@ public class TherapistMatcher {
             score += 2;
         }
         if (person.getGender().equals(therapist.getGender())) {
-            score += 1;
+            score += person.getImportanceGender();
         }
         if (Math.abs(person.getAge() - therapist.getAge()) <= 5) {
-            score += 1;
+            score += person.getImportanceAge();
         }
         return score;
-    }
-
-    private static Map<Therapist, List<Client>> getMatches(List<Client> clients, Map<Client, List<Therapist>> chosenTherapists) {
-        Map<Therapist, List<Client>> matches = new HashMap<>();
-
-        for (Client client : clients) {
-            List<Therapist> therapistList = chosenTherapists.get(client);
-            for (Therapist therapist : therapistList) {
-                if (!matches.containsKey(therapist)) {
-                    matches.put(therapist, new ArrayList<>());
-                }
-                matches.get(therapist).add(client);
-            }
-        }
-
-        return matches;
     }
 
 

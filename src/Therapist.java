@@ -22,6 +22,7 @@ public class Therapist {
     public static void main(String[] args) {
         readTherapists();
     }
+
     public Therapist(String name, String specialty, String gender, int age) {
         this.name = name;
         this.specialty = specialty;
